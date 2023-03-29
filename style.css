@@ -1,0 +1,95 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+
+body {
+    background-color: #333;
+    display: flex;
+    justify-content: center;
+} 
+
+.container {
+    width: 80vw;
+    background-color: #222;
+    padding: 30px 20px;
+    border-radius: 10px;
+    display: grid;
+    grid-template-columns: 5fr 3fr;
+    align-items: center;
+    justify-content: center;
+    margin-top: 50px;
+}
+
+.img {
+    display: flex;
+    flex-direction: column;
+    gap: 50px;
+    align-items: center;
+}
+
+.img img, canvas {
+    max-width: 45vw;
+    max-height: 60vh;
+}
+
+.upload input {
+    display: none;
+}
+
+.upload label,
+.filters ul li:last-child span,
+#download{
+    color: #fff;
+    text-transform: capitalize;
+    font-size: 20px;
+    padding: 10px 20px;
+    border: #fff 2px dashed;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+#download {
+    text-decoration: none;
+}
+
+.filters ul , .filters ul li {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    direction: rtl;
+}
+
+.filters ul li label {
+    color: #fff;
+}
+
+.filters ul li:last-child {
+    flex-direction: row;
+    margin-top: 15px;
+    color: #fff;
+    justify-content: space-around;
+}
+
+.filters ul li:last-child span,
+#download {
+    background-color: dodgerblue;
+}
+
+input[type="range"] {
+    height: 6px;
+}
+
+@media (max-width: 850px) {
+    .container {
+        grid-template-columns: 1fr;
+        gap: 30px;
+    }
+    .img img,canvas {
+        max-width: 80vw;
+        margin-top: 10px;
+    }
+}
